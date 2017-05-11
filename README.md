@@ -20,7 +20,7 @@ A simple implementation of a list.
 <b><i>struts.list.initEmpty(size)</i></b>
 
 
-| Variable      | Type          | Explanation  |
-| :-------------: |:-------------:| :-----:|
-| size      | Integer | defines a size for an empty list |
 
+| Variable | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| size      | Integer | defines the length of an empty list  | true  |
