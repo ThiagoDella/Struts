@@ -17,10 +17,28 @@ Here you will find the documentation for this library.
 ### List
 A simple implementation of a list.
 
+#### Methods
+
 <b><i>struts.list.initEmpty(size)</i></b>
 
-
-
-| Variable | Type            | Explanation      | Return      |
+| Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-| size      | Integer | defines the length of an empty list  | true  |
+| size      | Integer | Defines the length of an empty list  | boolean  |
+
+<b><i>struts.list.size()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Return the current size from the list  | Integer  |
+
+<b><i>struts.list.moveBeginning()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Set the "pointer" position to the beginning of the list  | Integer [a pointer's value] |
+
+<b><i>struts.list.moveEnd()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Set the "pointer" position to the end of the list  | Integer [a pointer's value] |
