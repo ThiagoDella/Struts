@@ -21,15 +21,19 @@ struts.prototype.list = {
     for (var i = 0; i < size ; i++) {
       this.list.push(null);
     }
+    if(size === ( this.list.length - 1 )) return true;
+    else return false;
   },
   size() {
-    console.log(this.list.length);
+    return this.list.length;
   },
   moveBeginning(){
     this.pos = 0;
+    return this.pos;
   },
   moveEnd(){
     this.pos = list.length - 1;
+    return this.pos;
   },
   logList() {
     console.log(this.list.toString());
