@@ -54,13 +54,20 @@ struts.prototype.list = {
   },
   append(element) {
     this.list.push(element);
+    if(this.list[this.list.length - 1] === element) return true;
+    else return false;
   },
   insert(index, element) {
-    if(index >= 0 && index <= this.list.length) this.list.splice(index, 0, element);
+    if(index >= 0 && index <= this.list.length) {
+      this.list.splice(index, 0, element);
+      return true;
+    }
     else throw new RangeError("Position out bounds : There is no position with this value inside this list.");
   },
   insertBeginning(element) {
     this.list.unshift(element);
+    if(this.list[0] === element) return true;
+    else return false;
   },
   pullOut() {
     return this.list.pop();
@@ -71,7 +78,7 @@ struts.prototype.list = {
   returnList(){
     return this.list;
   },
-  returnElement(){
+  returnCurrentElement(){
     return this.list[this.pos];
   },
   erase() {
