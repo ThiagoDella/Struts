@@ -42,3 +42,54 @@ A simple implementation of a list.
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
 | -      | - | Set the "pointer" position to the end of the list  | Integer [a pointer's value] |
+
+<b><i>struts.list.forward()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Increments the current postion by one step  | - |
+
+<b><i>struts.list.backward()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Decrements the current position by one step  | - |
+
+<b><i>struts.list.append()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| element      | - | Insert an element at the end of the list  | boolean |
+
+<b><i>struts.list.insertBeginning()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| element     | - |Insert an element at the beginning of the list  | boolean |
+
+<b><i>struts.list.pullOut()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Returns and removes the last element on the list  | element |
+
+
+<b><i>struts.list.logList()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Prints the list itens  | - |
+
+<b><i>struts.list.logCurrentElement()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Prints the element where the position points to  | - |
+
+<b><i>struts.list.logCurrentPos()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Prints the current position  | - |
+
+
