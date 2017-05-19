@@ -117,35 +117,56 @@ struts.prototype.list = {
 */
 struts.prototype.stack = {
   stack : [],
+  returnStack(){
+    return this.stack;
+  },
   insert(element){
-    this.stack.push(element);
+    if(element !== undefined) this.stack.push(element);
+    else throw new TypeError("Please provide an elemente to be inserted.").
   },
   size(){
     return this.stack.length;
   },
   pullOut(){
-    if(stack.length > 0 ) return this.stack.pop();
+    if(this.stack.length > 0 ) return this.stack.pop();
     else throw new RangeError("There is no element in Stack.");
   },
   peek(){
-    return this.stack[this.stack.length - 1];
+    if(this.size() > 0) return this.stack[this.size() - 1];
+    else throw new RangeError("There is no element in Stack.");
   },
   erase(){
     this.stack = [];
+    if(this.size() === 0){
+      return true;
+    }
+    else return false;
   },
   look(){
     console.log(this.stack.toString());
   },
   exchange(){
-    var aux = this.stack[this.stack.length - 2];
-    this.stack[this.stack.length - 2] = this.stack[this.stack.length - 1];
-    this.stack[this.stack.length - 1] = aux;
+    if(this.size() >= 2){
+      var aux = this.stack[this.size() - 2];
+      this.stack[this.size() - 2] = this.stack[this.size() - 1];
+      this.stack[this.size() - 1] = aux;
+      return true;
+    }
+    else throw new RangeError("There is no enough stacked elements to execute this action (min of two).");
   },
   duplicate(){
-    this.stack.push(this.stack[this.stack.length - 1]);
+    if(this.size() > 0){
+      this.stack.push(this.stack[this.stack.length - 1]);
+      return true;
+    }
+    else throw new RangeError("There is no element in Stack.");
   },
   revert(){
-    this.stack = this.stack.reverse();
+    if(this.size() > 0){
+      this.stack = this.stack.reverse();
+      return this.returnStack();
+    }
+    else throw new RangeError("There is no element in Stack.");
   }
 };
 
