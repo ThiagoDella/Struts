@@ -90,7 +90,9 @@ struts.prototype.list = {
   },
   removeElement(element) {
     if(element !== undefined){
-      return this.list.splice(this.list.indexOf(element), 1);
+      var indexToFind = this.list.indexOf(element);
+      if(indexToFind !== -1) return this.list.splice(indexToFind, 1);
+      else throw new ReferenceError("the element: " + element + " was not found.");
     }
     else throw new TypeError("Please provide an element to be removed.");
   },
