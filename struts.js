@@ -18,11 +18,14 @@ struts.prototype.list = {
   list : [],
   pos: 0,
   initEmpty(size) {
-    for (var i = 0; i < size ; i++) {
-      this.list.push(null);
+    if(typeof size === "number"){
+      for (var i = 0; i < size ; i++) {
+        this.list.push(null);
+      }
+      if(size === ( this.list.length - 1 )) return true;
+      else return false;
     }
-    if(size === ( this.list.length - 1 )) return true;
-    else return false;
+    else throw new TypeError("This function is expecting a number as parameter.");
   },
   size() {
     return this.list.length;
@@ -53,27 +56,43 @@ struts.prototype.list = {
     else throw new RangeError("Position out bounds : You've tried to set a position in list smaller then its length.");
   },
   append(element) {
-    this.list.push(element);
-    if(this.list[this.list.length - 1] === element) return true;
-    else return false;
+    if(element !== undefined){
+      this.list.push(element);
+      if(this.list[this.list.length - 1] === element) return true;
+      else return false;
+    }
+    else throw new TypeError("Please provide a valid element to be inserted.");
   },
   insert(index, element) {
-    if(index >= 0 && index <= this.list.length) {
-      this.list.splice(index, 0, element);
-      return true;
+    if(index !== undefined || typeof index !== "number"){
+      if(element !== undefined){
+        if(index >= 0 && index <= this.list.length) {
+          this.list.splice(index, 0, element);
+          return true;
+        }
+        else throw new RangeError("Position out bounds : There is no position with this value inside this list.");
+      }
+      else throw new TypeError("Please provide an element to be inserted.");
     }
-    else throw new RangeError("Position out bounds : There is no position with this value inside this list.");
+    else throw new TypeError("This function is expecting a number as index.");
+
   },
   insertBeginning(element) {
-    this.list.unshift(element);
-    if(this.list[0] === element) return true;
-    else return false;
+    if(elemente !== undefined){
+      this.list.unshift(element);
+      if(this.list[0] === element) return true;
+      else return false;
+    }
+    else throw new TypeError("Please provide a valid element to be inserted.");
   },
   pullOut() {
     return this.list.pop();
   },
   removeElement(element) {
-    this.list.splice(this.list.indexOf(element), 1);
+    if(element !== undefined){
+      return this.list.splice(this.list.indexOf(element), 1);
+    }
+    else throw new TypeError("Please provide an element to be removed.");
   },
   returnList(){
     return this.list;
@@ -83,6 +102,10 @@ struts.prototype.list = {
   },
   erase() {
     this.list = [];
+    if(this.list.length === 0){
+      return true;
+    }
+    else return false;
   }
 };
 
