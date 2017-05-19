@@ -105,7 +105,8 @@ struts.prototype.list = {
   },
   erase() {
     this.list = [];
-    if(this.list.length === 0){
+    this.moveBeginning();
+    if(this.list.length === 0 && this.pos === 0){
       return true;
     }
     else return false;
