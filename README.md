@@ -23,7 +23,7 @@ A simple implementation of a list.
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-| size      | Integer | Defines the length of an empty list  | boolean  |
+| size      | Integer | Defines the length of an empty list  | Boolean  |
 
 <b><i>struts.list.size()</i></b>
 
@@ -59,19 +59,49 @@ A simple implementation of a list.
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-| element      | - | Insert an element at the end of the list  | boolean |
+| Element      | - | Insert an element at the end of the list  | Boolean |
 
 <b><i>struts.list.insertBeginning()</i></b>
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-| element     | - |Insert an element at the beginning of the list  | boolean |
+| Element     | - |Insert an element at the beginning of the list  | Bolean |
+
+<b><i>struts.list.insert()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| Index, Element     | - |Insert an element at the provided position  | Bolean |
 
 <b><i>struts.list.pullOut()</i></b>
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-| -      | - | Returns and removes the last element on the list  | element |
+| -      | - | Returns and removes the last element on the list  | Element |
+
+<b><i>struts.list.removeElement()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| Element      | - | Returns the removed element  | Element |
+
+<b><i>struts.list.returnList()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Returns this list | Array |
+
+<b><i>struts.list.returnCurrentElement()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Returns the current element which the position points to  | Element |
+
+<b><i>struts.list.erase()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+| -      | - | Erases list and set position to zero | Boolean |
 
 
 <b><i>struts.list.logList()</i></b>
