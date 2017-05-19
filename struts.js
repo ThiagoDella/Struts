@@ -100,7 +100,8 @@ struts.prototype.list = {
     return this.list;
   },
   returnCurrentElement(){
-    return this.list[this.pos];
+    if( this.list.length > 0 && this.list.length > this.pos) return this.list[this.pos];
+    else throw new RangeError("Position out bounds : There is no position with this value inside this list.");
   },
   erase() {
     this.list = [];
