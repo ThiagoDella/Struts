@@ -123,7 +123,10 @@ struts.prototype.stack = {
     return this.stack;
   },
   insert(element){
-    if(element !== undefined) this.stack.push(element);
+    if(element !== undefined){
+      this.stack.push(element);
+      return true;
+    }
     else throw new TypeError("Please provide an elemente to be inserted.").
   },
   size(){
