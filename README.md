@@ -55,19 +55,19 @@ A simple implementation of a list.
 |:-------:|:-------------:|:-------:|:-------:|
 | -      | - | Decrements the current position by one step  | - |
 
-<b><i>struts.list.append()</i></b>
+<b><i>struts.list.append(element)</i></b>
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
 | Element      | - | Insert an element at the end of the list  | Boolean |
 
-<b><i>struts.list.insertBeginning()</i></b>
+<b><i>struts.list.insertBeginning(element)</i></b>
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
 | Element     | - |Insert an element at the beginning of the list  | Bolean |
 
-<b><i>struts.list.insert()</i></b>
+<b><i>struts.list.insert(index, element)</i></b>
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
@@ -79,7 +79,7 @@ A simple implementation of a list.
 |:-------:|:-------------:|:-------:|:-------:|
 | -      | - | Returns and removes the last element on the list  | Element |
 
-<b><i>struts.list.removeElement()</i></b>
+<b><i>struts.list.removeElement(element)</i></b>
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
@@ -101,7 +101,7 @@ A simple implementation of a list.
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-| -      | - | Erases list and set position to zero | Boolean |
+| -      | - | Erases the list and set position to zero | Boolean |
 
 
 <b><i>struts.list.logList()</i></b>
@@ -123,3 +123,67 @@ A simple implementation of a list.
 | -      | - | Prints the current position  | - |
 
 
+### Stack
+A Stack is one of the most important data structures in informatics, some of the most basic problems can be solved using it.
+
+#### Methods
+
+<b><i>struts.list.returnStack()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Return the stack  | Array  |
+
+<b><i>struts.list.insert(element)</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   Element    | - | Insert an element on the Stack  | Boolean  |
+
+<b><i>struts.list.size()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Returns the stack's size  | Integer  |
+
+<b><i>struts.list.pullOut()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Returns an removes an element of the stack  | Element  |
+
+<b><i>struts.list.peek()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Returns an element of the stack but doesn't removes it | Element  |
+
+<b><i>struts.list.erase()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Erases all the stack's content | Boolean  |
+
+<b><i>struts.list.look()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Prints the current stack  | -  |
+
+<b><i>struts.list.exchange()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Changes the position of newest stacked element with the second newest  | Boolean  |
+
+<b><i>struts.list.duplicate()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Makes a copy of the newest element and put it on the stack  | Boolean  |
+
+<b><i>struts.list.revert()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Reverts the stack orientation and returns it  | Array  |
