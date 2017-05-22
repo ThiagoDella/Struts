@@ -11,7 +11,7 @@
 struts = function(){};
 
 /*
-  This is a implementation of a simple list
+  This is an implementation of a simple list
   and its methods.
 */
 struts.prototype.list = {
@@ -114,7 +114,7 @@ struts.prototype.list = {
 };
 
 /*
-  This is a implementation of a stack
+  This is an implementation of a stack
   and its methods
 */
 struts.prototype.stack = {
@@ -175,6 +175,45 @@ struts.prototype.stack = {
   }
 };
 
+/*
+  This is an implementation of a queue
+  and its methods
+*/
 
+struts.prototype.queue = {
+  queue : [],
+  returnQueue(){
+    return this.queue;
+  },
+  size(){
+    return this.queue.length;
+  },
+  enqueue(element){
+    if(this.size() > 0){
+      this.queue.push(element);
+      return true;
+    }
+    else throw new RangeError("There is no element inside this queue.");
+  },
+  dequeue(){
+    if(this.size() > 0) return this.queue.shift();
+    else throw new RangeError("There is no element inside this queue.");
+  },
+  peek(){
+    if(this.size() > 0) return this.queue[0];
+    else throw new RangeError("There is no element inside this queue.");
+  },
+  revert(){
+    if(this.size() > 0){
+      this.queue.reverse();
+      return true;
+    }
+    else throw new RangeError("There is no element inside this queue.");
+  },
+  logQueue(){
+    console.log(this.queue);
+  }
+
+};
 
 module.exports = new struts();
