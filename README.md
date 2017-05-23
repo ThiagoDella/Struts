@@ -187,3 +187,45 @@ A Stack is one of the most important data structures in informatics, some of the
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
 |   -    | - | Reverts the stack orientation and returns it  | Array  |
+
+### Queue
+A queue is an good way of structuring actions with a logical order in time.
+
+#### Methods
+
+<b><i>struts.queue.returnQueue()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Returns the queue  | Array  |
+
+<b><i>struts.queue.enqueue(element)</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   Element    | - | Insert an element in the end of the queue  | Boolean  |
+
+<b><i>struts.queue.dequeue()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Returns and remove the first element of the queue  | Element |
+
+<b><i>struts.queue.peek()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Returns the first element of the queue but do not removes it  | Element  |
+
+<b><i>struts.queue.revert()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Reverts the queue's orientation  | Boolean  |
+
+
+<b><i>struts.queue.logQueue()</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   -    | - | Prints the whole queue  | - |
