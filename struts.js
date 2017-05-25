@@ -216,4 +216,15 @@ struts.prototype.queue = {
 
 };
 
+struts.prototype.sLinkedlist = {
+  node(){
+    return {
+      value : null;
+      next : null;
+    }
+  },
+  list : {}
+
+};
+
 module.exports = new struts();
