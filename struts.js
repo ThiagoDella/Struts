@@ -127,7 +127,7 @@ struts.prototype.stack = {
       this.stack.push(element);
       return true;
     }
-    else throw new TypeError("Please provide an elemente to be inserted.").
+    else throw new TypeError("Please provide an elemente to be inserted.");
   },
   size(){
     return this.stack.length;
@@ -217,13 +217,29 @@ struts.prototype.queue = {
 };
 
 struts.prototype.sLinkedlist = {
-  node(){
+  list : null,
+  node(value, nextValue){
     return {
-      value : null;
-      next : null;
+      value : value,
+      next : nextValue
     }
   },
-  list : {}
+  getList(){
+    return this.list;
+  },
+  newList(value){
+      if(this.list === null) this.list = this.node(value, null);
+      return this.list;
+  },
+  insert(value){
+    var iterator = this.list;
+    if(iterator.next !== null){
+      iterator = iterator.next;
+    }else{
+      iterator.next = this.node(value, null);
+    }
+    return true;
+  }
 
 };
 
