@@ -239,6 +239,16 @@ struts.prototype.sLinkedlist = {
       iterator.next = this.node(value, null);
     }
     return true;
+  },
+  search(value){
+    var iterator = this.list;
+    if (iterator === null) throw new RangeError("List is empty.");
+    else {
+      while(iterator.next !== null){
+        if (iterator.value === value) return iterator;
+        else iterator = iterator.next;
+      }
+    }
   }
 
 };
