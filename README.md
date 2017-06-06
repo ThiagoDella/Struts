@@ -229,3 +229,16 @@ A queue is an good way of structuring actions with a logical order in time.
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
 |   -    | - | Prints the whole queue  | - |
+
+### Singly Linked List
+A Singly Linked List is a data structure in a list form, where each node of a list holds a value and a pointer¹ to the next node of the list.
+
+¹ As in Javascript we cannot work with real pointers, this implementation simulates this behave with embedded objects.
+
+#### Methods
+
+<b><i>struts.sLinkedList.newList(element)</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   element    | - | This method takes the first element of the list and creates it  | Object  |
