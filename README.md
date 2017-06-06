@@ -241,4 +241,11 @@ A Singly Linked List is a data structure in a list form, where each node of a li
 
 | Param | Type            | Explanation      | Return      |
 |:-------:|:-------------:|:-------:|:-------:|
-|   element    | - | This method takes the first element of the list and creates it  | Object  |
+|   element    | - | This method takes the first element for the list and creates it  | Object  |
+
+
+<b><i>struts.sLinkedList.insert(element)</i></b>
+
+| Param | Type            | Explanation      | Return      |
+|:-------:|:-------------:|:-------:|:-------:|
+|   element    | - | This method inserts an element in the list  | Boolean  |
